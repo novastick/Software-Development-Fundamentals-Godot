@@ -13,14 +13,15 @@ extents = Vector2( 20.9622, 380.576 )
 extents = Vector2( 662.058, 10 )
 
 [node name="spaceinvaders clone " type="Control"]
-margin_left = 77.2318
-margin_top = -118.768
-margin_right = 1357.23
-margin_bottom = 601.232
+margin_left = 26.3703
+margin_top = 34.1063
+margin_right = 1306.37
+margin_bottom = 754.106
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+countdownmax = 50
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -55,7 +56,7 @@ position = Vector2( -5.37704, -0.768158 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 642.94, 669.056 )
+position = Vector2( 637.467, 626.41 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=[
 "top",
@@ -135,7 +136,7 @@ position = Vector2( -469.915, 183.97 )
 position = Vector2( 223.936, 294.115 )
 
 [node name="Enemy18" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 330.402, 294.815 )
+position = Vector2( 340.953, 291.8 )
 
 [node name="Enemy19" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 5.01413, 294.883 )
@@ -165,7 +166,7 @@ position = Vector2( 175.33, 404.428 )
 position = Vector2( -150.058, 404.497 )
 
 [node name="Enemy28" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -41.288, 404.428 )
+position = Vector2( -41.288, 408.324 )
 
 [node name="Enemy29" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( -364.372, 404.497 )
