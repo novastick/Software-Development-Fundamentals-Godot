@@ -37,6 +37,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Currentscorelabel" type="Label" parent="HUD"]
+margin_left = 4.0
+margin_top = 13.0
+margin_right = 89.0
+margin_bottom = 27.0
+text = "current score"
+
+[node name="Currentscore" type="Label" parent="HUD"]
+margin_left = 93.0
+margin_top = 13.0
+margin_right = 101.0
+margin_bottom = 27.0
+text = "0"
+
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",
 ]]
