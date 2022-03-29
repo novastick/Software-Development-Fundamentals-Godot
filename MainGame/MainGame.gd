@@ -14,6 +14,8 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("gameover")
+	GlobalVariables.currentscore.push_front (GlobalVariables.scoringinformation["currentScore"])
+	print (GlobalVariables.currentscore)
 
 
 	
