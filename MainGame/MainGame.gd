@@ -16,6 +16,7 @@ func _ready():
 	print("gameover")
 	GlobalVariables.currentscore.push_front (GlobalVariables.scoringinformation["currentScore"])
 	print (GlobalVariables.currentscore)
+	get_tree().change_scene("res://MainGame.tscn")
 
 
 	
