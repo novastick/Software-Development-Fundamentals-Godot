@@ -1,13 +1,19 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://menu/VBoxContainer.gd" type="Script" id=2]
-[ext_resource path="res://menu/quit.gd" type="Script" id=3]
+[ext_resource path="res://Images/player.png" type="Texture" id=1]
+[ext_resource path="res://Enemy/Beau_Rivage/BeauRivage-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://buttonsScript.gd" type="Script" id=3]
 [ext_resource path="res://menu/Control2.gd" type="Script" id=4]
-[ext_resource path="res://menu/options.gd" type="Script" id=5]
-[ext_resource path="res://menu/button.gd" type="Script" id=6]
 
-[node name="main menu" type="Control"]
+[sub_resource type="DynamicFont" id=1]
+size = 69
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 2 )
+
+[node name="titlescene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
@@ -15,78 +21,91 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="layout" type="VBoxContainer" parent="."]
-margin_left = -3.05176e-05
-margin_top = 2.72075
-margin_right = 942.0
-margin_bottom = 501.721
-rect_scale = Vector2( 1.36038, 1.42498 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
+[node name="menu" type="VBoxContainer" parent="."]
+margin_left = 130.807
+margin_top = 75.6772
+margin_right = 1170.81
+margin_bottom = 635.677
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="tital" type="HBoxContainer" parent="layout"]
-margin_right = 170.0
-margin_bottom = 14.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
+[node name="title" type="HBoxContainer" parent="menu"]
+margin_right = 1040.0
+margin_bottom = 93.0
 
-[node name="space invaders clone 2022" type="Label" parent="layout/tital"]
-margin_right = 170.0
-margin_bottom = 14.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "space invaders clone 2022"
-
-[node name="main" type="HBoxContainer" parent="layout"]
-margin_top = 18.0
-margin_right = 942.0
-margin_bottom = 86.0
-
-[node name="TextureRect" type="TextureRect" parent="layout/main"]
-margin_right = 12.0
-margin_bottom = 68.0
-size_flags_horizontal = 3
+[node name="logo" type="TextureRect" parent="menu/title"]
+margin_right = 64.0
+margin_bottom = 93.0
 texture = ExtResource( 1 )
-expand = true
 
-[node name="buttons" type="VBoxContainer" parent="layout/main"]
-margin_left = 16.0
-margin_right = 942.0
-margin_bottom = 68.0
-size_flags_horizontal = 3
+[node name="title text" type="Label" parent="menu/title"]
+margin_left = 68.0
+margin_right = 995.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 1 )
+text = "space invaders clone 2022 (made in godot)"
+
+[node name="menubuttons" type="HBoxContainer" parent="menu"]
+margin_top = 97.0
+margin_right = 1040.0
+margin_bottom = 542.0
 size_flags_vertical = 3
-size_flags_stretch_ratio = 73.92
-script = ExtResource( 2 )
 
-[node name="start game" type="Button" parent="layout/main/buttons"]
-margin_right = 926.0
-margin_bottom = 20.0
-text = "start game"
-script = ExtResource( 6 )
-scene_to_load = "res://maingame2/MainGame.tscn"
+[node name="buttons" type="VBoxContainer" parent="menu/menubuttons"]
+margin_right = 158.0
+margin_bottom = 445.0
 
-[node name="options" type="Button" parent="layout/main/buttons"]
-margin_top = 24.0
-margin_right = 926.0
-margin_bottom = 44.0
+[node name="new game" type="Button" parent="menu/menubuttons/buttons"]
+margin_right = 158.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 2 )
+text = "New game"
+script = ExtResource( 3 )
+scene_to_load = "res://MainGame.tscn"
+
+[node name="options" type="Button" parent="menu/menubuttons/buttons"]
+margin_top = 67.0
+margin_right = 158.0
+margin_bottom = 130.0
+custom_fonts/font = SubResource( 2 )
 text = "options"
-script = ExtResource( 5 )
-
-[node name="quit" type="Button" parent="layout/main/buttons"]
-margin_top = 48.0
-margin_right = 926.0
-margin_bottom = 68.0
-text = "quit"
 script = ExtResource( 3 )
 
-[node name="creadits" type="HBoxContainer" parent="layout"]
-margin_top = 90.0
-margin_right = 942.0
-margin_bottom = 104.0
+[node name="quit" type="Button" parent="menu/menubuttons/buttons"]
+margin_top = 134.0
+margin_right = 158.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 2 )
+text = "Quit"
+script = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="layout/creadits"]
+[node name="appinfo" type="HBoxContainer" parent="menu"]
+margin_top = 546.0
+margin_right = 1040.0
+margin_bottom = 560.0
+
+[node name="version" type="Label" parent="menu/appinfo"]
+margin_right = 475.0
 margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "0.1"
+
+[node name="developer" type="Label" parent="menu/appinfo"]
+margin_left = 479.0
+margin_right = 954.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Joel Rosa"
+
+[node name="high score label" type="Label" parent="menu/appinfo"]
+margin_left = 958.0
+margin_right = 1028.0
+margin_bottom = 14.0
+text = "high score:"
+
+[node name="high score " type="Label" parent="menu/appinfo"]
+margin_left = 1032.0
+margin_right = 1040.0
+margin_bottom = 14.0
+text = "0"
