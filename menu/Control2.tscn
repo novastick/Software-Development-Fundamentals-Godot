@@ -49,12 +49,12 @@ text = "space invaders clone 2022 (made in godot)"
 [node name="menubuttons" type="HBoxContainer" parent="menu"]
 margin_top = 97.0
 margin_right = 1040.0
-margin_bottom = 542.0
+margin_bottom = 541.0
 size_flags_vertical = 3
 
 [node name="buttons" type="VBoxContainer" parent="menu/menubuttons"]
 margin_right = 158.0
-margin_bottom = 445.0
+margin_bottom = 444.0
 
 [node name="new game" type="Button" parent="menu/menubuttons/buttons"]
 margin_right = 158.0
@@ -62,7 +62,6 @@ margin_bottom = 63.0
 custom_fonts/font = SubResource( 2 )
 text = "New game"
 script = ExtResource( 3 )
-scene_to_load = "res://MainGame.tscn"
 
 [node name="options" type="Button" parent="menu/menubuttons/buttons"]
 margin_top = 67.0
@@ -81,9 +80,9 @@ text = "Quit"
 script = ExtResource( 3 )
 
 [node name="appinfo" type="HBoxContainer" parent="menu"]
-margin_top = 546.0
+margin_top = 545.0
 margin_right = 1040.0
-margin_bottom = 560.0
+margin_bottom = 559.0
 
 [node name="version" type="Label" parent="menu/appinfo"]
 margin_right = 475.0

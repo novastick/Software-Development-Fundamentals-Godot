@@ -17,11 +17,14 @@ func _ready():
 	GlobalVariables.currentscore.push_front (GlobalVariables.scoringinformation["currentScore"])
 	print (GlobalVariables.currentscore)
 	get_tree().change_scene("res://MainGame.tscn")
-
-
 	
 	
+	
+	for button in $HUD.get_children():
+		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _on_Button_pressed(scene_to_load):
+	print("Changing Scene...")
+	print(scene_to_load)
+	get_tree().change_scene(scene_to_load)
