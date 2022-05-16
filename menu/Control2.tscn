@@ -62,6 +62,7 @@ margin_bottom = 63.0
 custom_fonts/font = SubResource( 2 )
 text = "New game"
 script = ExtResource( 3 )
+scene_to_load = "res://maingame2/MainGame.tscn"
 
 [node name="options" type="Button" parent="menu/menubuttons/buttons"]
 margin_top = 67.0
@@ -70,6 +71,7 @@ margin_bottom = 130.0
 custom_fonts/font = SubResource( 2 )
 text = "options"
 script = ExtResource( 3 )
+scene_to_load = "res://options/options.tscn"
 
 [node name="quit" type="Button" parent="menu/menubuttons/buttons"]
 margin_top = 134.0
@@ -108,3 +110,4 @@ margin_left = 1032.0
 margin_right = 1040.0
 margin_bottom = 14.0
 text = "0"
+[connection signal="pressed" from="menu/menubuttons/buttons/quit" to="menu/menubuttons/buttons/quit" method="_on_quit_pressed"]

@@ -10,4 +10,6 @@ var scoringinformation = {
 	"currentplayer": "user",
 	"highscore": 0,
 	"highscoreplayersname" : "winner"
+	
+	
 }

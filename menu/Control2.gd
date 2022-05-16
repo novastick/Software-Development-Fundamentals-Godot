@@ -2,7 +2,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for button in $"menu/menubuttons/buttons/new game".get_children():
+	for button in $"menu/menubuttons/buttons".get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 
 

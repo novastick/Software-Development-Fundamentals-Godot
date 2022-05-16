@@ -6,6 +6,7 @@ var speed = 500
 
 
 func _ready():
+	GlobalVariables.enemyBulletInstanceCount += 1
 	set_physics_process(true)
 
 func _physics_process(delta):
@@ -16,7 +17,6 @@ func _physics_process(delta):
 			collidedObject.get_collider().queue_free()
 			GlobalVariables.scoringinformation["currentscore"] +=10
 		queue_free()
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
