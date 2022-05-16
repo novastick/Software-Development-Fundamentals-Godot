@@ -6,7 +6,7 @@ var enemyBulletInstanceCount = 0
 var currentscore = []
 
 var scoringinformation = {
-	"currentscore": 0,
+	"currentScore": 0,
 	"currentplayer": "user",
 	"highscore": 0,
 	"highscoreplayersname" : "winner"

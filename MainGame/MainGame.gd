@@ -7,7 +7,8 @@ var currentTimer
 func _ready():
 	currentTimer = countdownmax
 	$HUD/Countdown.text = str(currentTimer)
-	
+	for button in $HUD/buttons.get_children():
+		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
 	while currentTimer > 0:
 		yield(get_tree().create_timer(1.0), "timeout")
 		$HUD/Countdown.text = str(currentTimer)
@@ -16,12 +17,11 @@ func _ready():
 	print("gameover")
 	GlobalVariables.currentscore.push_front (GlobalVariables.scoringinformation["currentScore"])
 	print (GlobalVariables.currentscore)
-	get_tree().change_scene("res://MainGame.tscn")
+	get_tree().change_scene("res://lose scene/you lost.tscn")
 	
 	
 	
-	for button in $HUD.get_children():
-		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
+	
 
 
 func _on_Button_pressed(scene_to_load):

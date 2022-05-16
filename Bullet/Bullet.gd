@@ -15,7 +15,7 @@ func _physics_process(delta):
 		print(collidedObject.collider.name)
 		if "Enemy" in collidedObject.collider.name:
 			collidedObject.get_collider().queue_free()
-			GlobalVariables.scoringinformation["currentscore"] +=10
+			GlobalVariables.scoringinformation["currentScore"] +=10
 		queue_free()
 
 
