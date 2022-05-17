@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
+[ext_resource path="res://buttonsScript.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -50,6 +51,18 @@ margin_top = 13.0
 margin_right = 101.0
 margin_bottom = 27.0
 text = "0"
+
+[node name="buttons" type="VBoxContainer" parent="HUD"]
+margin_left = 105.0
+margin_right = 154.0
+margin_bottom = 40.0
+
+[node name="main menu" type="Button" parent="HUD/buttons"]
+margin_right = 49.0
+margin_bottom = 20.0
+text = "menu"
+script = ExtResource( 6 )
+scene_to_load = "res://menu/Control2.tscn"
 
 [node name="Border_Left" type="Area2D" parent="." groups=[
 "left",

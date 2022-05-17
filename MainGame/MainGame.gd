@@ -5,6 +5,7 @@ var currentTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_process(true)
 	currentTimer = countdownmax
 	$HUD/Countdown.text = str(currentTimer)
 	for button in $HUD/buttons.get_children():
@@ -18,11 +19,11 @@ func _ready():
 	GlobalVariables.currentscore.push_front (GlobalVariables.scoringinformation["currentScore"])
 	print (GlobalVariables.currentscore)
 	get_tree().change_scene("res://lose scene/you lost.tscn")
-	
-	
-	
-	
 
+func _process(delta):
+	$HUD/Currentscore.text = str(GlobalVariables.scoringinformation["currentScore"])
+	if get_tree().get_nodes_in_group("enemy").size() == 0:
+		get_tree().change_scene("res://lose scene/you lost.tscn")
 
 func _on_Button_pressed(scene_to_load):
 	print("Changing Scene...")
