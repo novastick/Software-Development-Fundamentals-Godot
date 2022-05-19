@@ -33,7 +33,7 @@ __meta__ = {
 }
 
 [node name="title" type="HBoxContainer" parent="menu"]
-margin_right = 1901.0
+margin_right = 1040.0
 margin_bottom = 64.0
 
 [node name="logo" type="TextureRect" parent="menu/title"]
@@ -51,7 +51,7 @@ text = "star wars episode iv: death star battle"
 
 [node name="menubuttons" type="HBoxContainer" parent="menu"]
 margin_top = 68.0
-margin_right = 1901.0
+margin_right = 1040.0
 margin_bottom = 541.0
 size_flags_vertical = 3
 
@@ -86,31 +86,31 @@ script = ExtResource( 3 )
 
 [node name="appinfo" type="HBoxContainer" parent="menu"]
 margin_top = 545.0
-margin_right = 1901.0
+margin_right = 1040.0
 margin_bottom = 559.0
 
 [node name="version" type="Label" parent="menu/appinfo"]
-margin_right = 905.0
+margin_right = 475.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "0.1"
 
 [node name="developer" type="Label" parent="menu/appinfo"]
-margin_left = 909.0
-margin_right = 1814.0
+margin_left = 479.0
+margin_right = 954.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "Joel Rosa"
 
 [node name="high score label" type="Label" parent="menu/appinfo"]
-margin_left = 1818.0
-margin_right = 1888.0
+margin_left = 958.0
+margin_right = 1028.0
 margin_bottom = 14.0
 text = "high score:"
 
 [node name="high score " type="Label" parent="menu/appinfo"]
-margin_left = 1892.0
-margin_right = 1900.0
+margin_left = 1032.0
+margin_right = 1040.0
 margin_bottom = 14.0
 text = "0"
 [connection signal="pressed" from="menu/menubuttons/buttons/quit" to="menu/menubuttons/buttons/quit" method="_on_quit_pressed"]
