@@ -1,3 +1,9 @@
+# this code will control most things that hppen in the game 
+# timer 
+# scores 
+# a button to get back the menu 
+
+
 extends Control
 
 export(int) var countdownmax
@@ -23,7 +29,8 @@ func _ready():
 func _process(delta):
 	$HUD/Currentscore.text = str(GlobalVariables.scoringinformation["currentScore"])
 	if get_tree().get_nodes_in_group("enemy").size() == 0:
-		get_tree().change_scene("res://lose scene/you lost.tscn")
+		get_tree().change_scene("res://you win/you win scene.tscn")
+
 
 func _on_Button_pressed(scene_to_load):
 	print("Changing Scene...")

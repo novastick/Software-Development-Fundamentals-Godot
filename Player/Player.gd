@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var movement_speed = 200
+var movement_speed = 500
 var bulletSource = preload ("res://Bullet/Bullet.tscn")
 
 # Called when the node enters the scene tree for the first time.

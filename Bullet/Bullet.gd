@@ -1,8 +1,11 @@
+#this code will allow the bullet to move and collied with the border or enemy
+
+
+
 extends KinematicBody2D
 
-var speed = 500
+var speed = 500       #speed of the bullet
 
-# Called when the node enters the scene tree for the first time.
 
 
 func _ready():
@@ -19,6 +22,3 @@ func _physics_process(delta):
 		queue_free()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
